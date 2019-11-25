@@ -24,6 +24,13 @@ class Recorder {
     fun startRecording() : String?{
         try {
             mediaRecorder = MediaRecorder()
+
+            if(Preferences.settings != null){
+                mediaRecorder?.setAudioSamplingRate(Preferences.settings[0])
+                mediaRecorder?.setAudioChannels(Preferences.settings[1])
+                mediaRecorder?.setAudioEncodingBitRate(Preferences.settings[2])
+            }
+
             mediaRecorder?.setAudioSource(MediaRecorder.AudioSource.MIC)
             mediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
             mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
