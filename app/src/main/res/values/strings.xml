@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WaveRecorder</string>
+    <string name="record_btn_text_start">Старт</string>
+    <string name="record_btn_text_pause">Пауза</string>
+    <string name="record_btn_text_stop">Стоп</string>
+    <string name="btn_files">Записи</string>
+</resources>
